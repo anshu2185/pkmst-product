@@ -322,30 +322,7 @@
 				<version>${scala-maven-plugin.version}</version>
 			</plugin>
 
-					<plugin>
-						<groupId>io.gatling</groupId>
-						<artifactId>gatling-maven-plugin</artifactId>
-						<version>${gatling-plugin.version}</version>
-						<configuration>
-							<!-- Run Multiple Simulations -->
-							<runMultipleSimulations>true</runMultipleSimulations>
-							<includes>
-								<simulationClass>postProduct</simulationClass>
-								<!-- <simulationClass>getProduct</simulationClass> -->
-								<simulationClass>getProductById</simulationClass>
-								<simulationClass>deleteProduct</simulationClass>
-							</includes>
-						</configuration>
-						<executions>
-							<execution>
-								<phase>integration-test</phase>
-								<id>gatling</id>
-								<goals>
-									<goal>execute</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
+					
 					<plugin>
 						<groupId>org.springframework.boot</groupId>
 						<artifactId>spring-boot-maven-plugin</artifactId>
