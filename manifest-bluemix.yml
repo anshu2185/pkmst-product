@@ -1,8 +1,8 @@
 applications:
-- name: pkmst-product-2.0
+- name: pkmst-product-demo
   memory: 1G
   instances: 1
-  host: pkmst-product-2.0
+  host: pkmst-product-demo
   buildpack: https://github.com/cloudfoundry/java-buildpack.git
   path: target/pkmst-product.jar
   services:
