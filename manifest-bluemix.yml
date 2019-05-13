@@ -5,8 +5,7 @@ applications:
   host: pkmst-product-demo
   buildpack: https://github.com/cloudfoundry/java-buildpack.git
   path: target/pkmst-product.jar
-  health-check-type: http
-  health-check-http-endpoint: /health
+  
   services:
   - pkmst-elk
   - appdynamics-agent01
