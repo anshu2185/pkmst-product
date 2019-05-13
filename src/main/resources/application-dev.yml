@@ -15,7 +15,8 @@ eureka:
         #fetchRegistry: true
         serviceUrl:
             defaultZone: http://${REGISTRY_SERVER_PROKARMA_EI_PIVOTAL_URL}/eureka/
-
+server:
+  port: 8086
 
 pkmst:
     swagger:
