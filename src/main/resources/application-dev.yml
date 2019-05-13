@@ -5,12 +5,12 @@ eureka:
       leaseExpirationDurationInSeconds: 2
       hostname: ${vcap.application.uris[0]}
       instanceId: ${vcap.application.uris[0]}
-      healthCheckUrl: http://${vcap.application.uris[0]}/health
+      #healthCheckUrl: http://${vcap.application.uris[0]}/health
       nonSecurePort: 80
     client:
         enabled: true
-        healthcheck:
-            enabled: true
+        #healthcheck:
+            #enabled: true
         registerWithEureka: true
         #fetchRegistry: true
         serviceUrl:
