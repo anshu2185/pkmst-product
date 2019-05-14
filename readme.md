@@ -3,4 +3,4 @@ This is the base from where the pkmst maven archetype is created.It contains a P
 ProductServiceApplication class which is the starter is enabled with eureka client, hystrix dashboard,circuit breaker configuration.
 Please enable rabbitmq configuration in application yml.
 
-Lwt s rock..
+Lwt s rock now ..
