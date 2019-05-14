@@ -5,19 +5,18 @@ eureka:
       leaseExpirationDurationInSeconds: 2
       hostname: ${vcap.application.uris[0]}
       instanceId: ${vcap.application.uris[0]}
-      #healthCheckUrl: http://${vcap.application.uris[0]}/health
+      healthCheckUrl: http://${vcap.application.uris[0]}/health
       nonSecurePort: 80
     client:
         enabled: true
-        #healthcheck:
-            #enabled: true
+        healthcheck:
+            enabled: true
         registerWithEureka: true
         #fetchRegistry: true
         serviceUrl:
             defaultZone: http://${REGISTRY_SERVER_PROKARMA_EI_PIVOTAL_URL}/eureka/
 server:
-  port: 8086
-
+  port: ${server-port}  
 pkmst:
     swagger:
         title: Pkmst API
@@ -58,13 +57,13 @@ security:
      enabled: false
 # provide rabbitmq configuration
 spring:
-  rabbitmq:
+  #rabbitmq:
     #host: ${vcap.services.p-rabbitmq.credentials.protocols.amqp.host}
     #virtual-host: ${vcap.services.p-rabbitmq.credentials.protocols.amqp.vhost} 
     #username: ${vcap.services.p-rabbitmq.credentials.protocols.amqp.username}
     #password: ${vcap.services.p-rabbitmq.credentials.protocols.amqp.password}
     #port: ${vcap.services.p-rabbitmq.credentials.protocols.amqp.port:5672}
-    uri: ${vcap.services.p-rabbitmq.credentials.protocols.amqp.uris[0]}
+    #uri: ${vcap.services.p-rabbitmq.credentials.protocols.amqp.uris[0]}
 
   zipkin:
     base-url: http://${ZIPKIN_SERVER_PROKARMA_EI_PIVOTAL_URL}
