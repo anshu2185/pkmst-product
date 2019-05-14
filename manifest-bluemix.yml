@@ -1,8 +1,8 @@
 applications:
-- name: pkmst-product-3
+- name: pkmst-product-8
   memory: 1G
   instances: 1
-  host: pkmst-product-3
+  host: pkmst-product-8
   buildpack: https://github.com/cloudfoundry/java-buildpack.git
   path: target/pkmst-product.jar
   
