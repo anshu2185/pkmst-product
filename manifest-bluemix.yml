@@ -8,7 +8,7 @@ applications:
   
   services:
   - pkmst-elk
-  - appdynamics-agent01
+
   
   env:
     SPRING_ADMIN_PROKARMA_EI_PIVOTAL_URL: pkmst-spring-admin.mybluemix.net
